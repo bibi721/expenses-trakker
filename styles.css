@@ -1,0 +1,132 @@
+:root {
+    --primary-color: #3498db;
+    --accent-color: #2ecc71;
+    --bg-color: #f4f6f9;
+    --card-bg: #ffffff;
+    --text-color: #333333;
+    --hover-color: #2980b9;
+    --table-border: #ecf0f1;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background: var(--primary-color);
+    color: white;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+section {
+    width: 100%;
+    max-width: 700px;
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px var(--shadow);
+    margin-bottom: 30px;
+}
+
+form input,
+form select,
+form button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: var(--hover-color);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--table-border);
+}
+
+th {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+td {
+    background-color: #fafafa;
+}
+
+td button {
+    margin-right: 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: var(--accent-color);
+    color: white;
+    cursor: pointer;
+}
+
+td button:hover {
+    background-color: #27ae60;
+}
+
+.filters {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.filters label,
+.filters select,
+.filters input {
+    flex: 1;
+    min-width: 120px;
+}
+
+/* 📏 Resized Pie Chart */
+.charts canvas#categoryChart {
+    max-width: 400px;
+    height: auto !important;
+    margin: 0 auto 30px auto;
+    display: block;
+}
+
+/* ✅ Responsive Line Chart remains full width */
+.charts canvas#trendChart {
+    width: 100% !important;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+footer {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
